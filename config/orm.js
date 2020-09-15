@@ -11,12 +11,12 @@ const orm = {
           cb(result);
         }));
       },
-      insertOne: function(table, name, cb) {
-        var queryString = "INSERT INTO ?? (name) VALUES (?)";
+      insertOne: function(table, cols, vals, cb, name) {
+        var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)";
         
         console.log(queryString);
 
-        connection.query(queryString, [table, name], ((err, result) => {
+        connection.query(queryString, [table, name, cols, vals], ((err, result) => {
           if (err) {
             throw err;
           }

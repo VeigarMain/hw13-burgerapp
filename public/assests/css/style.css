@@ -27,26 +27,27 @@ body {
   }
   
   li {
-      padding: 5px;
+      
       text-align: center;
       font-weight: 600px;
-      font-family: Arial, Helvetica, sans-serif; 
+      font-family: Arial, Helvetica, sans-serif;
+      color: aqua; 
     }
     
    
   
     label {
-      padding: 10px;
+      
       font-size: 25px;
     }
     
     .create-form {
-      padding: 5px;
+      
       text-align: center;
     }
     
     .form-group {
-      margin-bottom: 5px;
+      
       font-size: 40px;
     }
     
