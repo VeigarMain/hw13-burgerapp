@@ -1,7 +1,7 @@
 <!-- Create button that will submit user input into the database -->
 
 <h1>Burgers!</h1>
-<img src="../public/assests/img/Deluxe_Krabby_Patty.jpg" width="300" height="300" alt="Burger">
+<img src="/assests/img/Deluxe_Krabby_Patty.jpg" width="300" height="300" alt="Burger">
 <h2>Burgers that have not been devoured!</h2>
 
 <ul>
@@ -13,6 +13,7 @@
 
   <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
     {{#unless devoured}}Devour{{/unless}}
+    <i class="fas fa-knife-kitchen"></i>
   </button>
 </li>
 {{/unless}}
@@ -40,6 +41,6 @@
   </div>
 
 
-  <button type="submit">Add A Burger!</button>
+  <button  type="submit"><i class="fas fa-hamburger"></i>Add A Burger!</button>
 </form>
 
