@@ -9,12 +9,14 @@ const burger = {
 
     create: function(cols, vals, cb) {
         orm.insertOne("burgers", cols, vals, ((res) => {
+            console.log("burgers", cols, vals);
             cb(res);
         }));
     },
 
     update: function(id_num, cb) {
-        orm.updateOne("burgers", "devoured", 1, "id", id_num, ((res) => {
+        console.log("burger", id_num);
+        orm.updateOne("burgers", "devoured", id_num, "id", cb, ((res) => {
             cb(res)
         }));
     }

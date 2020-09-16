@@ -3,7 +3,7 @@ $(function () {
   $(".change-devoured").on("click", function (event) {
       var id = $(this).data("id");
       var newDevoured = $(this).data("newdevoured");
-
+        console.log(id);
       var newDevouredState = {
           devoured: newDevoured
       };
@@ -23,9 +23,9 @@ $(function () {
   $(".create-form").on("submit", function (event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
-
+        console.log($("#cb").val());
       var newBurger = {
-          burger_name: $("#br").val(),
+          burger_name: $("#cb").val(),
           devoured: $("[name=devoured]:checked").val()
       };
 

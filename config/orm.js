@@ -48,11 +48,12 @@ const orm = {
         }));
       },
       insertOne: function(table, cols, vals, cb, name) {
-        var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)";
+       console.log("orm", vals); 
+        var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?, false)";
         
         console.log(queryString);
 
-        connection.query(queryString, [table, name, cols, vals], ((err, result) => {
+        connection.query(queryString, vals, ((err, result) => {
           if (err) {
             throw err;
           }
@@ -62,10 +63,11 @@ const orm = {
       },
      
       updateOne: function(table, col, val, id_col, id_num, cb) {
-        var queryString = "UPDATE ?? SET ?? = (?) WHERE ?? = (?)"
+        console.log("orm", val);
+        var queryString = "UPDATE burgers SET devoured = 1 WHERE id = " + val.devoured;
     
         console.log(queryString);
-        connection.query(queryString, [table, col, val, id_col, id_num], ((err, result) => {
+        connection.query(queryString, ((err, result) => {
           if (err) {
             throw err;
           }
